@@ -1,5 +1,7 @@
 <?php
 
+use GuzzleHttp\Client;
+
 /**
  * goBack30Days:
  * helper function that returns the date of the
@@ -41,4 +43,20 @@ function decodeAndRemoveMetadata($jsonData): array
 {
     $rawDecodedData = json_decode($jsonData, true);
     return $rawDecodedData['items'];
+}
+
+/**
+ * getRepos:
+ * sends a GET request, receives it's response,
+ * format and decode it then returns it
+ * 
+ * @return array
+ */
+function getRepos(): array
+{
+    $client = new Client();
+    $uri = formatURI();
+    $response = $client->request('GET', $uri);
+    $repositories = decodeAndRemoveMetadata($response->getBody());
+    return $repositories;
 }

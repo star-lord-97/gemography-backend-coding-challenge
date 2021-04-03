@@ -2,7 +2,6 @@
     "require": {
         "guzzlehttp/guzzle": "7.0",
         "league/route": "^5.0",
-        "laminas/laminas-diactoros": "^2.5",
         "laminas/laminas-httphandlerrunner": "^1.3"
     }
 }

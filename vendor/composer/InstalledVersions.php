@@ -19,7 +19,7 @@ private static $installed = array (
     'aliases' => 
     array (
     ),
-    'reference' => '9bc056950bee01dc6b22a37b6fff2f96489c158a',
+    'reference' => '3ecd1f7c8ee1da20f35e12631f15f7c53457d193',
     'name' => '__root__',
   ),
   'versions' => 
@@ -31,7 +31,7 @@ private static $installed = array (
       'aliases' => 
       array (
       ),
-      'reference' => '9bc056950bee01dc6b22a37b6fff2f96489c158a',
+      'reference' => '3ecd1f7c8ee1da20f35e12631f15f7c53457d193',
     ),
     'guzzlehttp/guzzle' => 
     array (
@@ -59,15 +59,6 @@ private static $installed = array (
       array (
       ),
       'reference' => '35ea11d335fd638b5882ff1725228b3d35496ab1',
-    ),
-    'laminas/laminas-diactoros' => 
-    array (
-      'pretty_version' => '2.5.0',
-      'version' => '2.5.0.0',
-      'aliases' => 
-      array (
-      ),
-      'reference' => '4ff7400c1c12e404144992ef43c8b733fd9ad516',
     ),
     'laminas/laminas-httphandlerrunner' => 
     array (
@@ -162,13 +153,6 @@ private static $installed = array (
       ),
       'reference' => '12ac7fcd07e5b077433f5f2bee95b3a771bf61be',
     ),
-    'psr/http-factory-implementation' => 
-    array (
-      'provided' => 
-      array (
-        0 => '1.0',
-      ),
-    ),
     'psr/http-message' => 
     array (
       'pretty_version' => '1.0.1',
@@ -220,13 +204,6 @@ private static $installed = array (
       array (
       ),
       'reference' => '120b605dfeb996808c31b6477290a714d356e822',
-    ),
-    'zendframework/zend-diactoros' => 
-    array (
-      'replaced' => 
-      array (
-        0 => '^2.2.1',
-      ),
     ),
     'zendframework/zend-httphandlerrunner' => 
     array (

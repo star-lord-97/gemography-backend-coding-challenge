@@ -29,7 +29,6 @@ function formatURI(): string
     return 'https://api.github.com/search/repositories?q=created:>' . $date . '&sort=stars&order=desc&per_page=100';
 }
 
-
 /**
  * decodeAndRemoveMetadata:
  * helper function that receives json string,
@@ -59,4 +58,30 @@ function getRepos(): array
     $response = $client->request('GET', $uri);
     $repositories = decodeAndRemoveMetadata($response->getBody());
     return $repositories;
+}
+
+/**
+ * collectLanguagesLinks:
+ * loops through each repository grabbing only
+ * it's link and saves it in an associative array
+ * with the index of the language name, then
+ * returns the new associative array
+ * 
+ * @return array
+ */
+function collectLanguagesLinks(): array
+{
+    $repositories = getRepos();
+    $languagesLinks = array();
+
+    foreach ($repositories as $repository) {
+        if (array_key_exists($repository['language'], $languagesLinks))
+            array_push($languagesLinks[$repository['language']], $repository['html_url']);
+        else {
+            $languagesLinks[$repository['language']] = array();
+            array_push($languagesLinks[$repository['language']], $repository['html_url']);
+        }
+    }
+
+    return $languagesLinks;
 }

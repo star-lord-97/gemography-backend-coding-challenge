@@ -11,7 +11,7 @@ use function GuzzleHttp\json_encode;
 
 $router = new Router();
 
-$router->get('/gemography-backend-coding-challenge/github', function (ServerRequestInterface $request): ResponseInterface {
+$router->get('/gemography-backend-coding-challenge/github/languages', function (ServerRequestInterface $request): ResponseInterface {
     $arrayToReturn = array();
     foreach (collectLanguagesLinks() as $language => $links) {
         array_push($arrayToReturn, array(
